@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Moon Alignment Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application for tracking, visualizing, and predicting moon alignment patterns across different global locations.
 
-## Available Scripts
+![Moon Alignment Tracker](https://i.imgur.com/ZTY0eXj.png)
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+- **Interactive World Map**: Visualize moon alignment data with multiple view modes
+  - Standard view with visibility circles
+  - Heatmap visualization for visibility intensity
+  - Focused view on aligned locations
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Advanced Data Analysis**:
+  - Time-series charts showing visibility and angle trends
+  - Comprehensive filtering system by location, date range, and thresholds
+  - Simultaneous alignment detection across locations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Predictive Capabilities**:
+  - Statistical prediction of future alignment events
+  - Confidence scoring for predictions
+  - Multi-location alignment forecasting
 
-### `npm test`
+- **Real-time Simulation**:
+  - Animated moon movements and alignments
+  - Customizable simulation speed
+  - Visual indicators for alignment events
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Notification System**:
+  - Real-time alerts for new alignment events
+  - Interactive notification panel with animations
+  - Time-based notifications with relative timestamps
 
-### `npm run build`
+- **MapReduce Implementation**:
+  - Efficient data processing using MapReduce paradigm
+  - Web Workers for asynchronous processing
+  - Optimized for handling large datasets
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **User Experience**:
+  - Dark mode toggle for better viewing
+  - Responsive design for all screen sizes
+  - Data export in JSON and CSV formats
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js (v14+)
+- npm or yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/moon-alignment-tracker.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate to the project directory:
+   ```
+   cd moon-alignment-tracker
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-## Learn More
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔧 Architecture
 
-### Code Splitting
+The application follows a component-based architecture using React:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `src/components/`: UI components organized by functionality
+- `src/context/`: Context API for state management
+- `src/data/`: Data simulation and generation
+- `src/utils/`: Utility functions including MapReduce implementation
+- `src/workers/`: Web Workers for background processing
 
-### Analyzing the Bundle Size
+## 🧠 How Moon Alignment Prediction Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The prediction system analyzes historical alignment patterns to forecast future events:
 
-### Making a Progressive Web App
+1. **Historical Analysis**: Calculates time intervals between past alignments
+2. **Pattern Recognition**: Determines average intervals for each location
+3. **Extrapolation**: Projects future alignments based on established patterns
+4. **Confidence Scoring**: Assigns reliability scores based on available data
+5. **Simultaneous Detection**: Identifies potential multi-location alignments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌐 Technical Implementation
 
-### Advanced Configuration
+- **Frontend**: React.js
+- **State Management**: React Context API
+- **Data Processing**: Custom MapReduce implementation
+- **Map Visualization**: react-leaflet with heatmap extension
+- **Charts**: Chart.js with date-fns adapter
+- **Asynchronous Processing**: Web Workers API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📊 Data Simulation
 
-### Deployment
+The application uses algorithmic data generation to simulate moon alignment patterns:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Position calculations based on astronomical formulas
+- Simulated visibility affected by time of day and lunar cycle
+- Correlation of alignments across geographic locations
 
-### `npm run build` fails to minify
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.

@@ -1,38 +1,106 @@
+/* App container */
 .App {
-  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #1976d2;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.App-subtitle {
+  margin: 10px 0 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Main content */
+.App-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Sections */
+.App-section {
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+/* Footer */
+.App-footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #eee;
+}
+
+/* Dark mode support */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.dark-mode .App-header {
+  border-bottom-color: #333;
+}
+
+.dark-mode .App-header h1 {
+  color: #64b5f6;
+}
+
+.dark-mode .App-subtitle {
+  color: #bbb;
+}
+
+.dark-mode .section-title {
+  color: #f0f0f0;
+  border-bottom-color: #333;
+}
+
+.dark-mode .App-footer {
+  color: #999;
+  border-top-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App {
+    padding: 0 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
   }
 }

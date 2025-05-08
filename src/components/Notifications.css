@@ -1,0 +1,273 @@
+.notifications-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Notification icon */
+.notification-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.dark-mode .notification-icon {
+  background-color: #333;
+}
+
+.notification-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.notification-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #555;
+}
+
+.dark-mode .notification-icon svg {
+  fill: #ddd;
+}
+
+.notification-icon.has-new {
+  background-color: #4285F4;
+}
+
+.notification-icon.has-new svg {
+  fill: white;
+}
+
+.notification-icon.blink {
+  background-color: #EA4335;
+}
+
+/* Notification badge */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #EA4335;
+  color: white;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+/* Notifications panel */
+.notifications-panel {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 320px;
+  max-height: 500px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.dark-mode .notifications-panel {
+  background-color: #2a2a2a;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Notifications header */
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.dark-mode .notifications-header {
+  background-color: #333;
+  border-bottom-color: #444;
+}
+
+.notifications-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.dark-mode .notifications-header h3 {
+  color: #ddd;
+}
+
+.clear-all-btn {
+  background: none;
+  border: none;
+  color: #4285F4;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.clear-all-btn:hover {
+  background-color: rgba(66, 133, 244, 0.1);
+}
+
+.clear-all-btn:disabled {
+  color: #999;
+  cursor: default;
+}
+
+.dark-mode .clear-all-btn {
+  color: #64b5f6;
+}
+
+.dark-mode .clear-all-btn:hover {
+  background-color: rgba(100, 181, 246, 0.1);
+}
+
+.dark-mode .clear-all-btn:disabled {
+  color: #666;
+}
+
+/* Notifications list */
+.notifications-list {
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+/* Empty notifications */
+.empty-notifications {
+  padding: 30px 20px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+.dark-mode .empty-notifications {
+  color: #777;
+}
+
+/* Notification item */
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.dark-mode .notification-item {
+  border-bottom-color: #444;
+}
+
+.notification-item:hover {
+  background-color: #f5f5f5;
+}
+
+.dark-mode .notification-item:hover {
+  background-color: #333;
+}
+
+.notification-item.alignment {
+  border-left: 4px solid #FBBC05;
+}
+
+.notification-content {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.notification-content h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.dark-mode .notification-content h4 {
+  color: #eee;
+}
+
+.notification-content p {
+  margin: 0 0 5px;
+  font-size: 13px;
+  color: #666;
+}
+
+.dark-mode .notification-content p {
+  color: #bbb;
+}
+
+.notification-time {
+  font-size: 11px;
+  color: #999;
+}
+
+.dark-mode .notification-time {
+  color: #777;
+}
+
+/* Dismiss button */
+.dismiss-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 18px;
+  line-height: 1;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.dismiss-btn:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .dismiss-btn {
+  color: #777;
+}
+
+.dark-mode .dismiss-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .notifications-wrapper {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .notifications-panel {
+    width: 300px;
+    right: -5px;
+  }
+} 
